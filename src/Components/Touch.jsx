@@ -38,6 +38,7 @@ const Touch = () => {
         alert(error.message)
       }finally{
         setloader(false)
+        formik.resetForm()
       }
     },
   });
@@ -107,7 +108,7 @@ const Touch = () => {
             />
             {formik.touched.message && formik.errors.message ? <p>{formik.errors.message}</p> : null}
 
-            <button className='button' type="submit">{loader?"Loading...":"Submit"}</button>
+            <button className='button' style={{background:loader?"grey":"linear-gradient(267deg,#DA7C25 0.36%,#B923E1 102.06%)"}} disabled={loader} type="submit">{loader?"Loading...":"Submit"}</button>
           </form>
         </div>
       </div>
