@@ -1,5 +1,6 @@
+import axios from 'axios';
 import { useFormik } from 'formik';
-import React from 'react';
+import React, { useState } from 'react';
 
 const validate = (values) => {
   const errors = {};
@@ -18,6 +19,7 @@ const validate = (values) => {
 };
 
 const Touch = () => {
+    const [loader,setloader]=useState(false)
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -26,7 +28,17 @@ const Touch = () => {
     },
     validate,
     onSubmit: async (values) => {
-      console.log(values);
+      try {
+        setloader(true)
+        const res=await axios.post("https://porfoliobe-5134.onrender.com/details",values,{
+            withCredentials:true
+        })
+        alert(res.data.message)
+      } catch (error) {
+        alert(error.message)
+      }finally{
+        setloader(false)
+      }
     },
   });
 
@@ -95,7 +107,7 @@ const Touch = () => {
             />
             {formik.touched.message && formik.errors.message ? <p>{formik.errors.message}</p> : null}
 
-            <button className='button' type="submit">Submit now</button>
+            <button className='button' type="submit">{loader?"Loading...":"Submit"}</button>
           </form>
         </div>
       </div>
