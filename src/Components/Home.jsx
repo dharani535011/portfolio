@@ -21,7 +21,7 @@ const Home = () => {
               })
               setopen(false)
             }}>Connect with me</button>
-            <a href="https://drive.google.com/file/d/10z8L0Qsuu3ulElYO9zrng7fj1v-3zfvv/view?usp=drive_link"><button className='bu' style={{height:"52px"}}>My resume</button></a>
+            <a href="https://drive.google.com/file/d/10z8L0Qsuu3ulElYO9zrng7fj1v-3zfvv/view?usp=drive_link" target='_blank'><button className='bu' style={{height:"52px"}}>My resume</button></a>
         </div>
            </div>
         </div>
