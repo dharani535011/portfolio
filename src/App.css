@@ -38,6 +38,9 @@ body{
             cursor: pointer;
             transition: transform .4s ease;
             width: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         li:hover{
             background: linear-gradient(267deg,#DA7C25 0.36%,#B923E1 102.06%);
