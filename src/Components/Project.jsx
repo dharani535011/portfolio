@@ -3,6 +3,8 @@ import img from '../../public/1.png';
 import img1 from '../../public/2.png';
 import img2 from '../../public/3.png';
 import img3 from '../../public/4.png';
+import img4 from '../../public/5.png';
+import img5 from '../../public/6.png';
 
 const Project = () => {
   return (
@@ -33,6 +35,18 @@ const Project = () => {
             <a href="https://westside-shopping.netlify.app/" target='_blank'> <img className='img-fluid' src={img3} alt="Project 4" /></a>
             <a href="https://github.com/dharani535011/westsideFE.git" target='_blank'> <button className='bp1'>Github code</button></a>
             <a href="https://westside-shopping.netlify.app/" target='_blank'> <button className='bp2'>View live</button>  </a>
+            
+          </div>
+          <div className='col'>
+            <a href="https://find-movies-task.netlify.app/" target='_blank'> <img className='img-fluid' src={img4} alt="Project 4" /></a>
+            <a href="https://github.com/dharani535011/findmovies.git" target='_blank'> <button className='bp1'>Github code</button></a>
+            <a href="https://find-movies-task.netlify.app/" target='_blank'> <button className='bp2'>View live</button>  </a>
+            
+          </div>
+          <div className='col'>
+            <a href="https://recruitment-portal-task.netlify.app/" target='_blank'> <img className='img-fluid' src={img5} alt="Project 4" /></a>
+            <a href="https://github.com/dharani535011/recruitment-portal.git" target='_blank'> <button className='bp1'>Github code</button></a>
+            <a href="https://recruitment-portal-task.netlify.app/" target='_blank'> <button className='bp2'>View live</button>  </a>
             
           </div>
         </div>
